@@ -83,7 +83,7 @@ def on_submit():
 
 # GUI setup
 root = tk.Tk()
-root.title("Music Genre Classifier via Spotify")
+root.title("Music Genre Classifier")
 root.geometry("500x300")
 root.resizable(False, False)
 
