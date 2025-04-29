@@ -4,7 +4,6 @@ import requests, re, base64, os
 from dotenv import load_dotenv
 load_dotenv()
 
-# Load credentials from environment variables or paste directly
 SPOTIFY_CLIENT_ID = os.environ.get("SPOTIFY_CLIENT")
 SPOTIFY_CLIENT_SECRET = os.environ.get("SPOTIFY_SECRET")
 YOUTUBE_API_KEY = os.environ.get("YT_API_KEY")
@@ -34,7 +33,6 @@ def get_youtube_title(video_id):
         return None
 
 def clean_title_for_spotify(title):
-    # Remove things like (Official Video), [Lyrics], etc.
     title = re.sub(r'[\(\[].*?[\)\]]', '', title)
     title = re.sub(r'[^a-zA-Z0-9\s]', '', title)
     return title.strip()
@@ -81,7 +79,6 @@ def on_submit():
 
     result_label.config(text=f"Predicted Genres: {result}")
 
-# GUI setup
 root = tk.Tk()
 root.title("Music Genre Classifier")
 root.geometry("500x300")
