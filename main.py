@@ -77,10 +77,10 @@ def on_submit():
     except Exception as e:
         result = f"Error: {str(e)}"
 
-    result_label.config(text=f"Predicted Genres: {result}")
+    result_label.config(text=f"Predicted Genre(s): {result}")
 
 root = tk.Tk()
-root.title("Music Genre Classifier")
+root.title("Genre Genie")
 root.geometry("500x300")
 root.resizable(False, False)
 
